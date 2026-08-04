@@ -44,11 +44,7 @@
     <section class="hero">
         <div class="container hero-content">
             <h1 class="hero-title">Encuentra tu espacio en Cienfuegos</h1>
-            <p class="hero-subtitle">Propiedades seleccionadas en la Perla del Sur. Desde casas coloniales hasta apartamentos modernos con vista a la bahía.</p>
-            <div class="hero-botones">
-                <button class="btn-hero-outline" onclick="filtrarPorTipo('venta')">Venta de Casas</button>
-                <button class="btn-hero-outline" onclick="filtrarPorTipo('alquiler')">Alquiler de Casas</button>
-            </div>
+            <p class="hero-subtitle">Propiedades seleccionadas en la Perla del Sur. Casas, apartamentos y habitaciones en las mejores zonas de la ciudad.</p>
         </div>
         <div class="hero-overlay"></div>
     </section>
@@ -56,6 +52,14 @@
     <!-- Filtros de Búsqueda -->
     <section class="filtros-section" id="propiedades">
         <div class="container">
+            <!-- Pestañas de categoría -->
+            <div class="filtros-tabs">
+                <button class="filtro-tab activo" onclick="filtrarPorCategoria('todas')">Todas</button>
+                <button class="filtro-tab" onclick="filtrarPorCategoria('venta')">Venta de Casas</button>
+                <button class="filtro-tab" onclick="filtrarPorCategoria('alquiler')">Alquiler de Casas</button>
+                <button class="filtro-tab" onclick="filtrarPorCategoria('habitacion')">Alquiler de Habitaciones</button>
+            </div>
+            
             <div class="filtros-container">
                 <div class="filtro-group">
                     <label class="filtro-label">Tipo de Propiedad</label>
@@ -65,17 +69,18 @@
                         <option value="apartamento">Apartamento</option>
                         <option value="villa">Villa</option>
                         <option value="finca">Finca</option>
+                        <option value="habitacion">Habitación</option>
                     </select>
                 </div>
                 <div class="filtro-group">
                     <label class="filtro-label">Precio Máximo (USD)</label>
                     <select class="filtro-select">
                         <option value="">Sin límite</option>
+                        <option value="50000">$50,000</option>
                         <option value="100000">$100,000</option>
                         <option value="150000">$150,000</option>
                         <option value="200000">$200,000</option>
-                        <option value="300000">$300,000</option>
-                        <option value="500000">$500,000+</option>
+                        <option value="300000">$300,000+</option>
                     </select>
                 </div>
                 <div class="filtro-group">
@@ -94,11 +99,11 @@
         </div>
     </section>
 
-    <!-- Propiedades Destacadas -->
+    <!-- Propiedades -->
     <section class="propiedades-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" id="titulo-propiedades">Propiedades Destacadas</h2>
+                <h2 class="section-title" id="titulo-propiedades">Todas las Propiedades</h2>
                 <p class="section-subtitle" id="subtitulo-propiedades">Descubre nuestra selección de propiedades en las mejores zonas de Cienfuegos</p>
             </div>
             <div class="propiedades-grid" id="propiedades-grid">
@@ -137,7 +142,7 @@
                         </svg>
                     </div>
                     <h3 class="confianza-titulo">Asesoría Completa</h3>
-                    <p class="confianza-texto">Te acompañamos en cada paso del proceso de compra de tu propiedad.</p>
+                    <p class="confianza-texto">Te acompañamos en cada paso del proceso de compra o alquiler.</p>
                 </div>
             </div>
         </div>
@@ -154,7 +159,7 @@
                         <span class="logo-subtitle">inmobiliaria</span>
                     </div>
                 </div>
-                <p class="footer-descripcion">Propiedades seleccionadas en Cienfuegos, Cuba. Encuentra tu próximo hogar con nosotros.</p>
+                <p class="footer-descripcion">Propiedades seleccionadas en Cienfuegos, Cuba. Venta, alquiler de casas y habitaciones.</p>
             </div>
             <div class="footer-contacto">
                 <h4 class="footer-titulo">Contacto</h4>
