@@ -11,7 +11,7 @@
     --verde-disponible: #6B7F6E;
     --granate-vendido: #8B4A4A;
     --azul-alquiler: #4A6B8B;
-    --gris-claro: #A0A0A0;
+    --verde-habitacion: #5B8B6F;
     --sombra-tarjeta: 0 2px 16px rgba(0, 0, 0, 0.06);
     --sombra-tarjeta-hover: 0 8px 32px rgba(0, 0, 0, 0.10);
     --transicion: 0.25s ease;
@@ -165,7 +165,7 @@ body {
     background-image: url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1200&q=80');
     background-size: cover;
     background-position: center;
-    min-height: 520px;
+    min-height: 480px;
     display: flex;
     align-items: center;
 }
@@ -202,37 +202,7 @@ body {
 .hero-subtitle {
     font-size: 18px;
     color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 36px;
     line-height: 1.7;
-}
-
-/* Botones outline del Hero */
-.hero-botones {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.btn-hero-outline {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--acento-naranja);
-    text-decoration: none;
-    padding: 14px 32px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    transition: var(--transicion);
-    border: 2px solid var(--acento-naranja);
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-}
-
-.btn-hero-outline:hover {
-    background-color: var(--acento-naranja);
-    color: #FFFFFF;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(212, 120, 59, 0.35);
 }
 
 .btn-cta {
@@ -255,6 +225,40 @@ body {
     box-shadow: 0 8px 24px rgba(212, 120, 59, 0.35);
 }
 
+/* ===== PESTAÑAS DE FILTRO ===== */
+.filtros-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: -1px;
+    flex-wrap: wrap;
+}
+
+.filtro-tab {
+    padding: 12px 20px;
+    border: 1px solid var(--borde-sutil);
+    border-bottom: none;
+    background-color: var(--fondo-principal);
+    color: var(--texto-secundario);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    transition: var(--transicion);
+}
+
+.filtro-tab:hover {
+    color: var(--acento-naranja);
+    background-color: #FFF;
+}
+
+.filtro-tab.activo {
+    background-color: var(--fondo-tarjeta);
+    color: var(--acento-naranja);
+    font-weight: 600;
+    border-color: var(--borde-sutil);
+}
+
 /* ===== FILTROS ===== */
 .filtros-section {
     margin-top: -32px;
@@ -264,7 +268,7 @@ body {
 
 .filtros-container {
     background-color: var(--fondo-tarjeta);
-    border-radius: 12px;
+    border-radius: 0 12px 12px 12px;
     padding: 24px 28px;
     display: flex;
     gap: 16px;
@@ -412,6 +416,11 @@ body {
 .tarjeta-etiqueta.alquiler {
     background-color: #EBF0F5;
     color: var(--azul-alquiler);
+}
+
+.tarjeta-etiqueta.habitacion {
+    background-color: #EBF5EE;
+    color: var(--verde-habitacion);
 }
 
 .tarjeta-etiqueta.vendido {
@@ -754,6 +763,11 @@ body {
     color: var(--azul-alquiler);
 }
 
+.detalle-etiqueta.habitacion {
+    background-color: #EBF5EE;
+    color: var(--verde-habitacion);
+}
+
 .detalle-etiqueta.vendido {
     background-color: #F5EBEB;
     color: var(--granate-vendido);
@@ -1005,15 +1019,15 @@ body {
     }
 
     .hero {
-        min-height: 400px;
+        min-height: 380px;
     }
 
-    .hero-botones {
-        flex-direction: column;
+    .filtros-tabs {
+        gap: 2px;
     }
 
-    .btn-hero-outline {
-        text-align: center;
+    .filtro-tab {
+        padding: 10px 14px;
     }
 
     .propiedades-grid {
@@ -1022,6 +1036,7 @@ body {
 
     .filtros-container {
         flex-direction: column;
+        border-radius: 0 0 12px 12px;
     }
 
     .filtro-group {
@@ -1090,6 +1105,11 @@ body {
 
     .hero-title {
         font-size: 26px;
+    }
+
+    .filtro-tab {
+        padding: 8px 10px;
+        font-size: 12px;
     }
 
     .tarjeta-caracteristicas {
