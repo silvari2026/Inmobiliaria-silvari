@@ -431,82 +431,6 @@ body {
 
 .btn-whatsapp-tarjeta:hover { background-color: #1fbd5a; }
 
-/* ===== BANNER SILVARI DISEÑO ===== */
-.diseno-section { padding: 0 0 80px; }
-
-.diseno-banner {
-    background: linear-gradient(135deg, #2A2A2A 0%, #1A1A1A 100%);
-    border-radius: 16px;
-    padding: 48px;
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    border: 1px solid #333;
-}
-
-.diseno-info { flex: 1; }
-
-.diseno-label {
-    display: inline-block;
-    background-color: var(--acento-naranja);
-    color: #FFF;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 16px;
-}
-
-.diseno-titulo {
-    font-size: 28px;
-    font-weight: 700;
-    color: #FFFFFF;
-    margin-bottom: 12px;
-}
-
-.diseno-descripcion {
-    font-size: 15px;
-    color: #B0B0B0;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-.diseno-servicios { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
-
-.diseno-tag {
-    background-color: rgba(255,255,255,0.08);
-    color: #CCC;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.diseno-btn {
-    display: inline-block;
-    background-color: var(--acento-naranja);
-    color: #FFFFFF;
-    text-decoration: none;
-    padding: 12px 28px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 600;
-    transition: var(--transicion);
-}
-
-.diseno-btn:hover {
-    background-color: #c06930;
-    transform: translateY(-2px);
-}
-
-.diseno-icono {
-    color: var(--acento-naranja);
-    opacity: 0.6;
-    flex-shrink: 0;
-}
-
 /* ===== CONFIANZA ===== */
 .confianza-section {
     padding: 80px 0;
@@ -672,7 +596,12 @@ body {
 /* ===== FOOTER ===== */
 .footer { background-color: var(--fondo-oscuro); color: #B0B0B0; padding: 64px 0 0; }
 
-.footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
+    gap: 40px;
+    margin-bottom: 48px;
+}
 
 .footer-descripcion { font-size: 14px; margin-top: 16px; line-height: 1.7; max-width: 320px; }
 
@@ -715,16 +644,13 @@ body {
     .propiedades-grid { grid-template-columns: 1fr; }
     .filtros-container { flex-direction: column; border-radius: 0 0 12px 12px; }
     .filtro-group { min-width: 100%; }
-    .footer-content { grid-template-columns: 1fr; gap: 32px; }
+    .footer-content { grid-template-columns: 1fr 1fr; gap: 32px; }
     .section-title { font-size: 26px; }
     .tarjeta-acciones { flex-direction: column; }
     .btn-contacto span { display: none; }
     .btn-contacto { padding: 10px 14px; }
     .logo-silvari { font-size: 20px; }
     .logo-img { height: 40px; }
-    .diseno-banner { flex-direction: column; padding: 32px; }
-    .diseno-icono { display: none; }
-    .diseno-titulo { font-size: 22px; }
     .detalle-grid { grid-template-columns: 1fr; gap: 32px; }
     .galeria { height: 280px; }
     .detalle-info h1 { font-size: 24px; }
@@ -741,6 +667,7 @@ body {
     .propiedades-section { padding: 48px 0; }
     .confianza-section { padding: 48px 0; }
     .logo-texto { display: none; }
+    .footer-content { grid-template-columns: 1fr; gap: 28px; }
     .galeria { height: 220px; }
     .detalle-precio { font-size: 24px; }
 }
