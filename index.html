@@ -50,19 +50,22 @@
     <!-- Filtros -->
     <section class="filtros-section" id="propiedades">
         <div class="container">
-            <div class="filtros-tabs">
-                <button class="filtro-tab activo" onclick="filtrarPorCategoria('todos')">Todos</button>
-                <button class="filtro-tab" onclick="filtrarPorCategoria('venta')">En Venta</button>
-                <button class="filtro-tab" onclick="filtrarPorCategoria('alquiler')">En Alquiler</button>
-                <button class="filtro-tab" onclick="filtrarPorCategoria('local')">Locales</button>
-                <button class="filtro-tab" onclick="filtrarPorCategoria('garaje')">Garajes</button>
-                <button class="filtro-tab" onclick="filtrarPorCategoria('terreno')">Terrenos</button>
-            </div>
-            
             <div class="filtros-container">
                 <div class="filtro-group">
+                    <label class="filtro-label">Categoría</label>
+                    <select class="filtro-select" id="filtro-categoria">
+                        <option value="">Todas</option>
+                        <option value="venta">Venta de Casas</option>
+                        <option value="alquiler">Alquiler de Casas</option>
+                        <option value="local">Locales Comerciales</option>
+                        <option value="garaje">Garajes</option>
+                        <option value="terreno">Terrenos</option>
+                        <option value="habitacion">Habitaciones</option>
+                    </select>
+                </div>
+                <div class="filtro-group">
                     <label class="filtro-label">Tipo de Inmueble</label>
-                    <select class="filtro-select">
+                    <select class="filtro-select" id="filtro-tipo">
                         <option value="">Todos</option>
                         <option value="casa">Casa</option>
                         <option value="apartamento">Apartamento</option>
@@ -74,23 +77,59 @@
                 </div>
                 <div class="filtro-group">
                     <label class="filtro-label">Operación</label>
-                    <select class="filtro-select">
+                    <select class="filtro-select" id="filtro-operacion">
                         <option value="">Todas</option>
                         <option value="venta">Venta</option>
                         <option value="alquiler">Alquiler</option>
                     </select>
                 </div>
                 <div class="filtro-group">
-                    <label class="filtro-label">Habitaciones / Ambientes</label>
-                    <select class="filtro-select">
+                    <label class="filtro-label">Precio Máximo</label>
+                    <select class="filtro-select" id="filtro-precio">
+                        <option value="">Sin límite</option>
+                        <option value="100">Hasta $100</option>
+                        <option value="200">Hasta $200</option>
+                        <option value="500">Hasta $500</option>
+                        <option value="1000">Hasta $1,000</option>
+                        <option value="2000">Hasta $2,000</option>
+                        <option value="50000">Hasta $50,000</option>
+                        <option value="100000">Hasta $100,000</option>
+                        <option value="200000">Hasta $200,000</option>
+                        <option value="300000">Hasta $300,000+</option>
+                    </select>
+                </div>
+                <div class="filtro-group">
+                    <label class="filtro-label">Habitaciones</label>
+                    <select class="filtro-select" id="filtro-habitaciones">
                         <option value="">Cualquiera</option>
                         <option value="1">1+</option>
                         <option value="2">2+</option>
                         <option value="3">3+</option>
                         <option value="4">4+</option>
+                        <option value="5">5+</option>
                     </select>
                 </div>
-                <button class="btn-filtrar">Buscar</button>
+                <div class="filtro-group">
+                    <label class="filtro-label">Reparto / Zona</label>
+                    <select class="filtro-select" id="filtro-zona">
+                        <option value="">Todos los repartos</option>
+                        <option value="Punta Gorda">Punta Gorda</option>
+                        <option value="La Punta">La Punta</option>
+                        <option value="Malecón">Malecón</option>
+                        <option value="Centro">Centro</option>
+                        <option value="Centro Histórico">Centro Histórico</option>
+                        <option value="Paseo del Prado">Paseo del Prado</option>
+                        <option value="Rancho Luna">Rancho Luna</option>
+                        <option value="Caonao">Caonao</option>
+                        <option value="Reina">Reina</option>
+                        <option value="San Lázaro">San Lázaro</option>
+                        <option value="Pastorita">Pastorita</option>
+                        <option value="Tulipán">Tulipán</option>
+                        <option value="Pueblo Griffo">Pueblo Griffo</option>
+                        <option value="Junco Sur">Junco Sur</option>
+                    </select>
+                </div>
+                <button class="btn-filtrar" onclick="aplicarFiltros()">Buscar</button>
             </div>
         </div>
     </section>
@@ -183,17 +222,13 @@
                 </a>
                 <a href="https://silvari.pages.dev/" target="_blank" rel="noopener" class="footer-link">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <circle cx="12" cy="12" r="10"/>
-                        <circle cx="12" cy="12" r="6"/>
-                        <circle cx="12" cy="12" r="2"/>
+                        <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
                     </svg>
                     Identidad Visual y Logotipos
                 </a>
                 <a href="https://silvari.pages.dev/" target="_blank" rel="noopener" class="footer-link">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="3" width="18" height="18" rx="3" ry="3"/>
-                        <circle cx="8.5" cy="8.5" r="1.5"/>
-                        <polyline points="21 15 16 10 5 21"/>
+                        <rect x="3" y="3" width="18" height="18" rx="3" ry="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
                     </svg>
                     Material Gráfico Publicitario
                 </a>
@@ -205,10 +240,7 @@
                 </a>
                 <a href="https://silvari.pages.dev/" target="_blank" rel="noopener" class="footer-link">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="3" width="7" height="7" rx="1"/>
-                        <rect x="14" y="3" width="7" height="7" rx="1"/>
-                        <rect x="3" y="14" width="7" height="7" rx="1"/>
-                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                        <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
                     </svg>
                     Diseño Arquitectónico y Renders
                 </a>
@@ -217,16 +249,10 @@
                 <h4 class="footer-titulo">Síguenos</h4>
                 <div class="redes-sociales">
                     <a href="https://facebook.com/silvari" class="red-social" target="_blank" rel="noopener" aria-label="Facebook">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
-                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
                     </a>
                     <a href="https://instagram.com/silvari" class="red-social" target="_blank" rel="noopener" aria-label="Instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                     </a>
                 </div>
             </div>
