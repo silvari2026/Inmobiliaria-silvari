@@ -15,8 +15,8 @@ const propiedades = [
             'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
             'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&q=80'
         ],
-        descripcion: 'Hermosa casa colonial restaurada en el corazón de Punta Gorda. Conserva sus detalles arquitectónicos originales combinados con comodidades modernas. Vista parcial a la bahía de Cienfuegos.',
-        latitud: 23.1132,
+        descripcion: 'Hermosa casa colonial restaurada en el corazón de Punta Gorda. Conserva sus detalles arquitectónicos originales combinados con comodidades modernas. Vista parcial a la bahía de Cienfuegos. La propiedad cuenta con techos altos, pisos de mosaico original y un patio interior con jardín tropical.',
+        latitud: 22.1132,
         longitud: -80.4532
     },
     {
@@ -33,8 +33,8 @@ const propiedades = [
             'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80',
             'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80'
         ],
-        descripcion: 'Moderno apartamento con vista panorámica al mar Caribe. Totalmente equipado, con acabados de primera calidad. Ubicado en una de las zonas más privilegiadas del Malecón cienfueguero.',
-        latitud: 23.1156,
+        descripcion: 'Moderno apartamento con vista panorámica al mar Caribe. Totalmente equipado, con acabados de primera calidad. Ubicado en una de las zonas más privilegiadas del Malecón cienfueguero. Incluye estacionamiento privado y acceso a terraza común.',
+        latitud: 22.1156,
         longitud: -80.4510
     },
     {
@@ -51,8 +51,8 @@ const propiedades = [
             'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800&q=80',
             'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80'
         ],
-        descripcion: 'Espectacular villa de diseño contemporáneo con piscina privada y jardín tropical. Amplios espacios interiores, cocina italiana y terraza con vista a la bahía.',
-        latitud: 23.1089,
+        descripcion: 'Espectacular villa de diseño contemporáneo con piscina privada y jardín tropical. Amplios espacios interiores, cocina italiana y terraza con vista a la bahía. La propiedad incluye casa de huéspedes independiente y garaje para dos vehículos.',
+        latitud: 22.1089,
         longitud: -80.4567
     },
     {
@@ -69,8 +69,8 @@ const propiedades = [
             'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80',
             'https://images.unsplash.com/photo-1600585153490-76fb20a32601?w=800&q=80'
         ],
-        descripcion: 'Joyita arquitectónica del siglo XIX en el casco histórico de Cienfuegos, declarado Patrimonio de la Humanidad por la UNESCO. Techos altos, patio interior y detalles originales.',
-        latitud: 23.1210,
+        descripcion: 'Joyita arquitectónica del siglo XIX en el casco histórico de Cienfuegos, declarado Patrimonio de la Humanidad por la UNESCO. Techos altos, patio interior y detalles originales restaurados con fidelidad histórica.',
+        latitud: 22.1210,
         longitud: -80.4489
     },
     {
@@ -87,8 +87,8 @@ const propiedades = [
             'https://images.unsplash.com/photo-1600566753086-4df530c79ef8?w=800&q=80',
             'https://images.unsplash.com/photo-1600573472562-36d9c0e46a2b?w=800&q=80'
         ],
-        descripcion: 'Penthouse de lujo en el emblemático Edificio Jagua. Terraza privada con jacuzzi, acabados de mármol y cocina abierta. Las mejores vistas de la ciudad.',
-        latitud: 23.1190,
+        descripcion: 'Penthouse de lujo en el emblemático Edificio Jagua. Terraza privada con jacuzzi, acabados de mármol y cocina abierta. Las mejores vistas de la ciudad y la bahía desde el último piso.',
+        latitud: 22.1190,
         longitud: -80.4498
     },
     {
@@ -106,8 +106,8 @@ const propiedades = [
             'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
             'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80'
         ],
-        descripcion: 'Antigua finca restaurada con exquisitez a pocos minutos de las playas de Rancho Luna. Terrenos extensos con árboles frutales, casa principal y casa de huéspedes independiente.',
-        latitud: 23.0987,
+        descripcion: 'Antigua finca restaurada con exquisitez a pocos minutos de las playas de Rancho Luna. Terrenos extensos con árboles frutales, casa principal y casa de huéspedes independiente. Ideal para proyecto turístico o residencia familiar de alto nivel.',
+        latitud: 22.0987,
         longitud: -80.4345
     }
 ];
@@ -202,7 +202,7 @@ function crearTarjeta(propiedad) {
             </div>
             <div class="tarjeta-acciones">
                 <a href="detalle-casa.html?id=${propiedad.id}" class="btn-ver-detalle">Ver Detalle</a>
-                <a href="https://wa.me/5355415537?text=${encodeURIComponent('Hola, me interesa la propiedad: ' + propiedad.titulo + ' (' + formatearPrecio(propiedad.precio) + ')')}" class="btn-whatsapp-tarjeta" target="_blank" rel="noopener">
+                <a href="https://wa.me/5355415547?text=${encodeURIComponent('Hola, me interesa la propiedad: ' + propiedad.titulo + ' (' + formatearPrecio(propiedad.precio) + ')')}" class="btn-whatsapp-tarjeta" target="_blank" rel="noopener">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
                     </svg>
@@ -234,7 +234,7 @@ function renderizarPropiedades(lista = propiedades) {
 // ===== ABRIR WHATSAPP GENERAL =====
 function abrirWhatsApp() {
     const mensaje = 'Hola, me interesa conocer más sobre las propiedades disponibles en Cienfuegos.';
-    window.open(`https://wa.me/5355415537?text=${encodeURIComponent(mensaje)}`, '_blank', 'noopener');
+    window.open('https://wa.me/5355415547?text=' + encodeURIComponent(mensaje), '_blank', 'noopener');
 }
 
 // ===== FILTROS =====
@@ -276,8 +276,230 @@ function configurarFiltros() {
     });
 }
 
+// ===== PÁGINA DE DETALLE =====
+let imagenActual = 0;
+let propiedadDetalle = null;
+
+function cambiarImagen(direccion) {
+    if (!propiedadDetalle) return;
+    
+    const total = propiedadDetalle.imagenes.length;
+    imagenActual = (imagenActual + direccion + total) % total;
+    
+    actualizarGaleria();
+}
+
+function irAImagen(index) {
+    if (!propiedadDetalle) return;
+    imagenActual = index;
+    actualizarGaleria();
+}
+
+function actualizarGaleria() {
+    if (!propiedadDetalle) return;
+    
+    const imagenes = document.querySelectorAll('.galeria-imagen');
+    const dots = document.querySelectorAll('.galeria-dot');
+    const contador = document.querySelector('.galeria-contador');
+    
+    imagenes.forEach((img, i) => {
+        img.classList.toggle('activa', i === imagenActual);
+    });
+    
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('activo', i === imagenActual);
+    });
+    
+    if (contador) {
+        contador.textContent = `${imagenActual + 1} / ${propiedadDetalle.imagenes.length}`;
+    }
+}
+
+function cargarDetalle() {
+    const contenedor = document.getElementById('detalle-contenido');
+    if (!contenedor) return;
+    
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get('id'));
+    
+    propiedadDetalle = propiedades.find(p => p.id === id);
+    
+    if (!propiedadDetalle) {
+        contenedor.innerHTML = `
+            <div class="container" style="text-align:center; padding: 80px 0;">
+                <h2>Propiedad no encontrada</h2>
+                <p style="margin: 16px 0; color: var(--texto-secundario);">La propiedad que buscas no está disponible.</p>
+                <a href="index.html" class="btn-cta">Volver al Inicio</a>
+            </div>
+        `;
+        return;
+    }
+    
+    imagenActual = 0;
+    
+    document.title = propiedadDetalle.titulo + ' | Silvari Inmobiliaria';
+    
+    // Construir HTML de imágenes de la galería
+    let imagenesHTML = '';
+    let dotsHTML = '';
+    propiedadDetalle.imagenes.forEach((img, index) => {
+        imagenesHTML += `
+            <img src="${img}" alt="${propiedadDetalle.titulo} - Imagen ${index + 1}" class="galeria-imagen ${index === 0 ? 'activa' : ''}">
+        `;
+        dotsHTML += `
+            <button class="galeria-dot ${index === 0 ? 'activo' : ''}" onclick="irAImagen(${index})" aria-label="Ir a imagen ${index + 1}"></button>
+        `;
+    });
+    
+    // Mapa
+    const mapaURL = `https://www.openstreetmap.org/export/embed.html?bbox=${propiedadDetalle.longitud - 0.005}%2C${propiedadDetalle.latitud - 0.005}%2C${propiedadDetalle.longitud + 0.005}%2C${propiedadDetalle.latitud + 0.005}&layer=mapnik&marker=${propiedadDetalle.latitud}%2C${propiedadDetalle.longitud}`;
+    
+    contenedor.innerHTML = `
+        <div class="container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a>
+                <span>›</span>
+                <a href="index.html#propiedades">Propiedades</a>
+                <span>›</span>
+                <span class="actual">${propiedadDetalle.titulo}</span>
+            </div>
+            
+            <!-- Galería -->
+            <div class="galeria">
+                ${imagenesHTML}
+                <div class="galeria-dots">
+                    ${dotsHTML}
+                </div>
+                <div class="galeria-controles">
+                    <button class="galeria-btn" onclick="cambiarImagen(-1)" aria-label="Imagen anterior">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"/>
+                        </svg>
+                    </button>
+                    <span class="galeria-contador">1 / ${propiedadDetalle.imagenes.length}</span>
+                    <button class="galeria-btn" onclick="cambiarImagen(1)" aria-label="Imagen siguiente">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Grid de detalle -->
+            <div class="detalle-grid">
+                <!-- Info principal -->
+                <div class="detalle-info">
+                    <h1>${propiedadDetalle.titulo}</h1>
+                    <div class="detalle-ubicacion">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        ${propiedadDetalle.ubicacion}
+                    </div>
+                    <span class="detalle-etiqueta ${propiedadDetalle.estado === 'disponible' ? 'disponible' : 'vendido'}">
+                        ${propiedadDetalle.estado === 'disponible' ? 'Disponible' : 'Vendido'}
+                    </span>
+                    <div class="detalle-precio">${formatearPrecio(propiedadDetalle.precio)}</div>
+                    
+                    <div class="detalle-descripcion">
+                        <p>${propiedadDetalle.descripcion}</p>
+                    </div>
+                    
+                    <div class="detalle-caracteristicas">
+                        <div class="detalle-caracteristica">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                            </svg>
+                            <div class="detalle-caracteristica-texto">
+                                <strong>${propiedadDetalle.habitaciones}</strong>
+                                Habitaciones
+                            </div>
+                        </div>
+                        <div class="detalle-caracteristica">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            <div class="detalle-caracteristica-texto">
+                                <strong>${propiedadDetalle.banos}</strong>
+                                Baños
+                            </div>
+                        </div>
+                        <div class="detalle-caracteristica">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            </svg>
+                            <div class="detalle-caracteristica-texto">
+                                <strong>${propiedadDetalle.metros} m²</strong>
+                                Superficie
+                            </div>
+                        </div>
+                        <div class="detalle-caracteristica">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <div class="detalle-caracteristica-texto">
+                                <strong>${propiedadDetalle.ubicacion.split(',')[0]}</strong>
+                                Zona
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mapa -->
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(--acento-negro);">Ubicación</h3>
+                    <div class="detalle-mapa">
+                        <iframe 
+                            src="${mapaURL}" 
+                            width="100%" 
+                            height="280" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Mapa de ubicación">
+                        </iframe>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="detalle-sidebar">
+                    <div class="sidebar-card">
+                        <h3>¿Te interesa esta propiedad?</h3>
+                        <div class="sidebar-precio">${formatearPrecio(propiedadDetalle.precio)}</div>
+                        
+                        <a href="https://wa.me/5355415547?text=${encodeURIComponent('Hola, me interesa la propiedad: ' + propiedadDetalle.titulo + ' (' + formatearPrecio(propiedadDetalle.precio) + ') - ' + propiedadDetalle.ubicacion)}" class="btn-contactar btn-whatsapp-detalle" target="_blank" rel="noopener">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+                            </svg>
+                            Contactar por WhatsApp
+                        </a>
+                        
+                        <a href="mailto:silvari2026@gmail.com?subject=${encodeURIComponent('Consulta sobre: ' + propiedadDetalle.titulo)}&body=${encodeURIComponent('Hola, me interesa recibir más información sobre esta propiedad:\n\n' + propiedadDetalle.titulo + '\n' + propiedadDetalle.ubicacion + '\nPrecio: ' + formatearPrecio(propiedadDetalle.precio) + '\n\nGracias.')}" class="btn-contactar btn-correo-detalle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            Enviar Correo
+                        </a>
+                        
+                        <a href="index.html#propiedades" class="btn-volver">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"/>
+                            </svg>
+                            Volver a Propiedades
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
 // ===== INICIAR =====
 document.addEventListener('DOMContentLoaded', () => {
     renderizarPropiedades();
     configurarFiltros();
+    cargarDetalle();
 });
