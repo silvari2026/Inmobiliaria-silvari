@@ -56,7 +56,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 72px;
+    height: 80px;
 }
 
 .logo-container {
@@ -64,15 +64,15 @@ body {
     display: block;
 }
 
-/* ===== LOGO DE SILVARI ===== */
+/* ===== LOGO DE SILVARI (MÁS GRANDE) ===== */
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 }
 
 .logo-img {
-    height: 44px;
+    height: 52px;
     width: auto;
     flex-shrink: 0;
 }
@@ -84,14 +84,14 @@ body {
 }
 
 .logo-silvari {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 700;
     color: var(--acento-negro);
     letter-spacing: 2px;
 }
 
 .logo-subtitle {
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 400;
     color: var(--texto-secundario);
     letter-spacing: 4px;
@@ -100,6 +100,10 @@ body {
 }
 
 /* Logo en footer (invertido) */
+.logo-footer .logo-img {
+    height: 44px;
+}
+
 .logo-footer .logo-silvari {
     color: #FFFFFF;
 }
@@ -553,6 +557,330 @@ body {
     line-height: 1.6;
 }
 
+/* ===== PÁGINA DE DETALLE ===== */
+.detalle-main {
+    padding: 48px 0 80px;
+    min-height: 60vh;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    margin-bottom: 32px;
+}
+
+.breadcrumb a {
+    color: var(--acento-naranja);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: var(--texto-secundario);
+    font-size: 14px;
+    margin: 0 8px;
+}
+
+.breadcrumb .actual {
+    color: var(--texto-secundario);
+}
+
+/* Galería de imágenes */
+.galeria {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    background-color: #E5E3E0;
+}
+
+.galeria-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.galeria-imagen.activa {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.galeria-controles {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+}
+
+.galeria-btn {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    transition: var(--transicion);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.galeria-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.galeria-contador {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 40px;
+    text-align: center;
+}
+
+.galeria-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 8px;
+}
+
+.galeria-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.galeria-dot.activo {
+    background-color: #FFFFFF;
+    transform: scale(1.3);
+}
+
+/* Grid de detalle */
+.detalle-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 48px;
+}
+
+.detalle-info h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--acento-negro);
+    margin-bottom: 4px;
+    letter-spacing: -0.3px;
+}
+
+.detalle-ubicacion {
+    font-size: 16px;
+    color: var(--texto-secundario);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.detalle-etiqueta {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+}
+
+.detalle-etiqueta.disponible {
+    background-color: #EBF0EB;
+    color: var(--verde-disponible);
+}
+
+.detalle-etiqueta.vendido {
+    background-color: #F5EBEB;
+    color: var(--granate-vendido);
+}
+
+.detalle-precio {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--acento-naranja);
+    margin-bottom: 32px;
+}
+
+.detalle-descripcion {
+    font-size: 16px;
+    color: var(--texto-principal);
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+/* Características en detalle */
+.detalle-caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.detalle-caracteristica {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background-color: var(--fondo-principal);
+    border-radius: 10px;
+}
+
+.detalle-caracteristica svg {
+    width: 22px;
+    height: 22px;
+    color: var(--acento-naranja);
+    flex-shrink: 0;
+}
+
+.detalle-caracteristica-texto {
+    font-size: 14px;
+    color: var(--texto-principal);
+}
+
+.detalle-caracteristica-texto strong {
+    display: block;
+    font-size: 16px;
+    color: var(--acento-negro);
+}
+
+/* Mapa */
+.detalle-mapa {
+    width: 100%;
+    height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    border: 1px solid var(--borde-sutil);
+}
+
+.detalle-mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Sidebar */
+.detalle-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.sidebar-card {
+    background-color: var(--fondo-tarjeta);
+    border-radius: 12px;
+    padding: 28px;
+    border: 1px solid var(--borde-sutil);
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.sidebar-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--acento-negro);
+    margin-bottom: 24px;
+}
+
+.sidebar-precio {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--acento-naranja);
+    margin-bottom: 28px;
+}
+
+.btn-contactar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transicion);
+    border: none;
+    margin-bottom: 12px;
+    text-decoration: none;
+}
+
+.btn-whatsapp-detalle {
+    background-color: #25D366;
+    color: #FFFFFF;
+}
+
+.btn-whatsapp-detalle:hover {
+    background-color: #1fbd5a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.btn-correo-detalle {
+    background-color: var(--fondo-tarjeta);
+    color: var(--texto-principal);
+    border: 1px solid var(--borde-sutil);
+}
+
+.btn-correo-detalle:hover {
+    background-color: var(--fondo-principal);
+    border-color: var(--acento-naranja);
+    color: var(--acento-naranja);
+}
+
+.btn-volver {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transicion);
+    border: none;
+    text-decoration: none;
+    margin-top: 16px;
+    background-color: var(--fondo-principal);
+    color: var(--texto-secundario);
+}
+
+.btn-volver:hover {
+    color: var(--acento-naranja);
+}
+
 /* ===== FOOTER ===== */
 .footer {
     background-color: var(--fondo-oscuro);
@@ -681,11 +1009,37 @@ body {
     }
 
     .logo-silvari {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .logo-img {
-        height: 36px;
+        height: 40px;
+    }
+
+    /* Detalle responsive */
+    .detalle-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .galeria {
+        height: 280px;
+    }
+
+    .detalle-info h1 {
+        font-size: 24px;
+    }
+
+    .detalle-precio {
+        font-size: 28px;
+    }
+
+    .detalle-caracteristicas {
+        grid-template-columns: 1fr;
+    }
+
+    .detalle-sidebar {
+        position: static;
     }
 }
 
@@ -712,5 +1066,13 @@ body {
 
     .logo-texto {
         display: none;
+    }
+
+    .galeria {
+        height: 220px;
+    }
+
+    .detalle-precio {
+        font-size: 24px;
     }
 }
