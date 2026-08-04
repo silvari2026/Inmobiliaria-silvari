@@ -228,7 +228,7 @@ function toggleFavorito(id, event) {
 
 // ===== ABRIR WHATSAPP =====
 function abrirWhatsApp() {
-    window.open('https://wa.me/5355415547?text=Hola%20me%20interesa%20conocer%20mas%20sobre%20las%20propiedades', '_blank');
+    window.open('https://wa.me/5355415537?text=Hola%20me%20interesa%20conocer%20mas%20sobre%20las%20propiedades', '_blank');
 }
 
 // ===== ETIQUETA SEGUN TIPO =====
