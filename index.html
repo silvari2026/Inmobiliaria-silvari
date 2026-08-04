@@ -45,7 +45,10 @@
         <div class="container hero-content">
             <h1 class="hero-title">Encuentra tu espacio en Cienfuegos</h1>
             <p class="hero-subtitle">Propiedades seleccionadas en la Perla del Sur. Desde casas coloniales hasta apartamentos modernos con vista a la bahía.</p>
-            <a href="#propiedades" class="btn-cta">Ver Propiedades</a>
+            <div class="hero-botones">
+                <button class="btn-hero-outline" onclick="filtrarPorTipo('venta')">Venta de Casas</button>
+                <button class="btn-hero-outline" onclick="filtrarPorTipo('alquiler')">Alquiler de Casas</button>
+            </div>
         </div>
         <div class="hero-overlay"></div>
     </section>
@@ -95,8 +98,8 @@
     <section class="propiedades-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Propiedades Destacadas</h2>
-                <p class="section-subtitle">Descubre nuestra selección de propiedades en las mejores zonas de Cienfuegos</p>
+                <h2 class="section-title" id="titulo-propiedades">Propiedades Destacadas</h2>
+                <p class="section-subtitle" id="subtitulo-propiedades">Descubre nuestra selección de propiedades en las mejores zonas de Cienfuegos</p>
             </div>
             <div class="propiedades-grid" id="propiedades-grid">
                 <!-- Las tarjetas se generan con JavaScript -->
