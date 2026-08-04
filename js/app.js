@@ -132,7 +132,6 @@ function toggleFavorito(id, event) {
     } else {
         favoritos.push(id);
         boton.classList.add('activo');
-        // Pequeña animación
         boton.style.transform = 'scale(1.3)';
         setTimeout(() => {
             boton.style.transform = 'scale(1)';
@@ -203,7 +202,7 @@ function crearTarjeta(propiedad) {
             </div>
             <div class="tarjeta-acciones">
                 <a href="detalle-casa.html?id=${propiedad.id}" class="btn-ver-detalle">Ver Detalle</a>
-                <a href="https://wa.me/5355555555?text=Hola,%20me%20interesa%20la%20propiedad:%20${encodeURIComponent(propiedad.titulo)}%20(${encodeURIComponent(formatearPrecio(propiedad.precio))})" class="btn-whatsapp-tarjeta" target="_blank" rel="noopener">
+                <a href="https://wa.me/5355415537?text=${encodeURIComponent('Hola, me interesa la propiedad: ' + propiedad.titulo + ' (' + formatearPrecio(propiedad.precio) + ')')}" class="btn-whatsapp-tarjeta" target="_blank" rel="noopener">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
                     </svg>
@@ -213,7 +212,6 @@ function crearTarjeta(propiedad) {
         </div>
     `;
     
-    // Evento de favorito
     const btnFavorito = articulo.querySelector('.tarjeta-favorito');
     btnFavorito.addEventListener('click', (e) => toggleFavorito(propiedad.id, e));
     
@@ -236,7 +234,7 @@ function renderizarPropiedades(lista = propiedades) {
 // ===== ABRIR WHATSAPP GENERAL =====
 function abrirWhatsApp() {
     const mensaje = 'Hola, me interesa conocer más sobre las propiedades disponibles en Cienfuegos.';
-    window.open(`https://wa.me/5355555555?text=${encodeURIComponent(mensaje)}`, '_blank', 'noopener');
+    window.open(`https://wa.me/5355415537?text=${encodeURIComponent(mensaje)}`, '_blank', 'noopener');
 }
 
 // ===== FILTROS =====
@@ -245,9 +243,10 @@ function configurarFiltros() {
     if (!btnFiltrar) return;
     
     btnFiltrar.addEventListener('click', () => {
-        const tipo = document.querySelectorAll('.filtro-select')[0]?.value;
-        const precioMax = document.querySelectorAll('.filtro-select')[1]?.value;
-        const habitaciones = document.querySelectorAll('.filtro-select')[2]?.value;
+        const selects = document.querySelectorAll('.filtro-select');
+        const tipo = selects[0]?.value || '';
+        const precioMax = selects[1]?.value || '';
+        const habitaciones = selects[2]?.value || '';
         
         let filtradas = [...propiedades];
         
@@ -269,12 +268,10 @@ function configurarFiltros() {
             filtradas = filtradas.filter(p => p.habitaciones >= parseInt(habitaciones));
         }
         
-        // Filtrar solo disponibles
         filtradas = filtradas.filter(p => p.estado === 'disponible');
         
         renderizarPropiedades(filtradas);
         
-        // Scroll suave a las propiedades
         document.getElementById('propiedades-grid')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 }
