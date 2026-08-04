@@ -502,4 +502,4 @@ document.addEventListener('DOMContentLoaded', () => {
     renderizarPropiedades();
     configurarFiltros();
     cargarDetalle();
-});
+}); 
