@@ -1,26 +1,15 @@
 // ===== DATOS DE INMUEBLES =====
 var propiedades = [
-    // VENTA DE CASAS
     { id: 1, titulo: 'Casa Colonial en Punta Gorda', ubicacion: 'Punta Gorda, Cienfuegos', precio: 180000, precioMostrar: '$180,000 USD', tipo: 'venta', categoria: 'casa', habitaciones: 4, banos: 3, metros: 240, estado: 'disponible', imagen: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80', imagenes: ['https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80','https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80'], descripcion: 'Hermosa casa colonial restaurada en Punta Gorda. Detalles arquitectonicos originales con comodidades modernas.', latitud: 22.1132, longitud: -80.4532 },
     { id: 2, titulo: 'Villa Moderna en La Punta', ubicacion: 'La Punta, Cienfuegos', precio: 250000, precioMostrar: '$250,000 USD', tipo: 'venta', categoria: 'casa', habitaciones: 5, banos: 4, metros: 380, estado: 'disponible', imagen: 'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80', imagenes: ['https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800&q=80'], descripcion: 'Villa contemporanea con piscina privada y jardin tropical.', latitud: 22.1089, longitud: -80.4567 },
-    
-    // ALQUILER DE CASAS
-    { id: 3, titulo: 'Apartamento Vista al Mar', ubicacion: 'Malecon, Cienfuegos', precio: 500, precioMostrar: '$500 USD / mes', tipo: 'alquiler', categoria: 'apartamento', habitaciones: 2, banos: 2, metros: 120, estado: 'disponible', imagen: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80', imagenes: ['https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80'], descripcion: 'Moderno apartamento con vista al mar Caribe. Totalmente equipado.', latitud: 22.1156, longitud: -80.4510 },
+    { id: 3, titulo: 'Apartamento Vista al Mar', ubicacion: 'Malecón, Cienfuegos', precio: 500, precioMostrar: '$500 USD / mes', tipo: 'alquiler', categoria: 'apartamento', habitaciones: 2, banos: 2, metros: 120, estado: 'disponible', imagen: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80', imagenes: ['https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80'], descripcion: 'Moderno apartamento con vista panoramica al mar Caribe.', latitud: 22.1156, longitud: -80.4510 },
     { id: 4, titulo: 'Casa de Playa Rancho Luna', ubicacion: 'Rancho Luna, Cienfuegos', precio: 1200, precioMostrar: '$1,200 USD / mes', tipo: 'alquiler', categoria: 'casa', habitaciones: 4, banos: 3, metros: 200, estado: 'disponible', imagen: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80', imagenes: ['https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80'], descripcion: 'Casa frente al mar con terraza y acceso directo a la playa.', latitud: 22.0987, longitud: -80.4345 },
-    
-    // LOCALES COMERCIALES
     { id: 5, titulo: 'Local Comercial en el Centro', ubicacion: 'Centro, Cienfuegos', precio: 85000, precioMostrar: '$85,000 USD', tipo: 'venta', categoria: 'local', habitaciones: 0, banos: 1, metros: 120, estado: 'disponible', imagen: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80', imagenes: ['https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80'], descripcion: 'Local comercial en pleno centro. Ideal para tienda, oficina o restaurante.', latitud: 22.1210, longitud: -80.4489 },
-    { id: 6, titulo: 'Local en Alquiler Paseo del Prado', ubicacion: 'Paseo del Prado, Cienfuegos', precio: 400, precioMostrar: '$400 USD / mes', tipo: 'alquiler', categoria: 'local', habitaciones: 0, banos: 1, metros: 90, estado: 'disponible', imagen: 'https://images.unsplash.com/photo-1600585153490-76fb20a32601?w=600&q=80', imagenes: ['https://images.unsplash.com/photo-1600585153490-76fb20a32601?w=800&q=80'], descripcion: 'Local en alquiler en una de las zonas mas transitadas.', latitud: 22.1190, longitud: -80.4498 },
-    
-    // GARAJES
+    { id: 6, titulo: 'Local en Alquiler Paseo del Prado', ubicacion: 'Paseo del Prado, Cienfuegos', precio: 400, precioMostrar: '$400 USD / mes', tipo: 'alquiler', categoria: 'local', habitaciones: 0, banos: 1, metros: 90, estado: 'disponible', imagen: 'https://images.unsplash.com/photo-1600585153490-76fb20a32601?w=600&q=80', imagenes: ['https://images.unsplash.com/photo-1600585153490-76fb20a32601?w=800&q=80'], descripcion: 'Local en alquiler en una de las zonas mas transitadas de la ciudad.', latitud: 22.1190, longitud: -80.4498 },
     { id: 7, titulo: 'Garaje en Punta Gorda', ubicacion: 'Punta Gorda, Cienfuegos', precio: 50, precioMostrar: '$50 USD / mes', tipo: 'alquiler', categoria: 'garaje', habitaciones: 0, banos: 0, metros: 18, estado: 'disponible', imagen: 'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=600&q=80', imagenes: ['https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&q=80'], descripcion: 'Garaje cerrado en zona residencial. Seguro y accesible.', latitud: 22.1132, longitud: -80.4532 },
-    
-    // TERRENOS
     { id: 8, titulo: 'Terreno en Rancho Luna', ubicacion: 'Rancho Luna, Cienfuegos', precio: 45000, precioMostrar: '$45,000 USD', tipo: 'venta', categoria: 'terreno', habitaciones: 0, banos: 0, metros: 800, estado: 'disponible', imagen: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&q=80', imagenes: ['https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80'], descripcion: 'Amplio terreno a pocos minutos de la playa. Ideal para construir.', latitud: 22.0987, longitud: -80.4345 },
-    
-    // HABITACIONES
-    { id: 9, titulo: 'Habitacion en Punta Gorda', ubicacion: 'Punta Gorda, Cienfuegos', precio: 150, precioMostrar: '$150 USD / mes', tipo: 'alquiler', categoria: 'habitacion', habitaciones: 1, banos: 1, metros: 25, estado: 'disponible', imagen: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80', imagenes: ['https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80'], descripcion: 'Habitacion amplia en casa colonial. Acceso a areas comunes.', latitud: 22.1132, longitud: -80.4532 },
-    { id: 10, titulo: 'Habitacion Centro', ubicacion: 'Centro, Cienfuegos', precio: 100, precioMostrar: '$100 USD / mes', tipo: 'alquiler', categoria: 'habitacion', habitaciones: 1, banos: 1, metros: 20, estado: 'disponible', imagen: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&q=80', imagenes: ['https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80'], descripcion: 'Habitacion comoda en el centro. Cerca de servicios.', latitud: 22.1190, longitud: -80.4498 }
+    { id: 9, titulo: 'Habitacion en Punta Gorda', ubicacion: 'Punta Gorda, Cienfuegos', precio: 150, precioMostrar: '$150 USD / mes', tipo: 'alquiler', categoria: 'habitacion', habitaciones: 1, banos: 1, metros: 25, estado: 'disponible', imagen: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80', imagenes: ['https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80'], descripcion: 'Habitacion amplia y luminosa en casa colonial. Acceso a areas comunes.', latitud: 22.1132, longitud: -80.4532 },
+    { id: 10, titulo: 'Habitacion Centro', ubicacion: 'Centro, Cienfuegos', precio: 100, precioMostrar: '$100 USD / mes', tipo: 'alquiler', categoria: 'habitacion', habitaciones: 1, banos: 1, metros: 20, estado: 'disponible', imagen: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&q=80', imagenes: ['https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80'], descripcion: 'Habitacion comoda en el centro. Cerca de servicios y transporte.', latitud: 22.1190, longitud: -80.4498 }
 ];
 
 // ===== FAVORITOS =====
@@ -52,7 +41,7 @@ function obtenerEtiqueta(propiedad) {
     return { clase: 'venta', texto: 'Disponible' };
 }
 
-// ===== TARJETA =====
+// ===== CREAR TARJETA =====
 function crearTarjeta(propiedad) {
     var articulo = document.createElement('article');
     articulo.className = 'tarjeta-propiedad';
@@ -88,36 +77,48 @@ function renderizarPropiedades(lista) {
     for (var i = 0; i < lista.length; i++) { grid.appendChild(crearTarjeta(lista[i])); }
 }
 
-// ===== FILTRAR POR CATEGORIA =====
-function filtrarPorCategoria(categoria) {
-    var tabs = document.querySelectorAll('.filtro-tab');
-    for (var t = 0; t < tabs.length; t++) tabs[t].classList.remove('activo');
-    
-    var indices = { todos: 0, venta: 1, alquiler: 2, local: 3, garaje: 4, terreno: 5 };
-    var tabIdx = indices[categoria] || 0;
-    if (tabs[tabIdx]) tabs[tabIdx].classList.add('activo');
+// ===== APLICAR FILTROS =====
+function aplicarFiltros() {
+    var categoria = document.getElementById('filtro-categoria')?.value || '';
+    var tipo = document.getElementById('filtro-tipo')?.value || '';
+    var operacion = document.getElementById('filtro-operacion')?.value || '';
+    var precioMax = document.getElementById('filtro-precio')?.value || '';
+    var habitaciones = document.getElementById('filtro-habitaciones')?.value || '';
+    var zona = document.getElementById('filtro-zona')?.value || '';
     
     var filtradas = [];
+    for (var i = 0; i < propiedades.length; i++) {
+        var p = propiedades[i];
+        if (p.estado !== 'disponible') continue;
+        
+        if (categoria === 'venta' && p.tipo !== 'venta') continue;
+        if (categoria === 'alquiler' && p.tipo !== 'alquiler') continue;
+        if (categoria === 'local' && p.categoria !== 'local') continue;
+        if (categoria === 'garaje' && p.categoria !== 'garaje') continue;
+        if (categoria === 'terreno' && p.categoria !== 'terreno') continue;
+        if (categoria === 'habitacion' && p.categoria !== 'habitacion') continue;
+        
+        if (tipo && p.categoria !== tipo) continue;
+        if (operacion && p.tipo !== operacion) continue;
+        if (precioMax && p.precio > parseInt(precioMax)) continue;
+        if (habitaciones && p.habitaciones < parseInt(habitaciones)) continue;
+        if (zona && p.ubicacion.indexOf(zona) === -1) continue;
+        
+        filtradas.push(p);
+    }
+    
     var titulo = document.getElementById('titulo-propiedades');
     var subtitulo = document.getElementById('subtitulo-propiedades');
     
-    if (categoria === 'todos') {
-        filtradas = propiedades;
-        if (titulo) titulo.textContent = 'Todos los Inmuebles';
-        if (subtitulo) subtitulo.textContent = 'Descubre nuestra seleccion de inmuebles en Cienfuegos';
-    } else if (categoria === 'venta') {
-        for (var i = 0; i < propiedades.length; i++) { if (propiedades[i].tipo === 'venta') filtradas.push(propiedades[i]); }
-        if (titulo) titulo.textContent = 'Inmuebles en Venta';
-    } else if (categoria === 'alquiler') {
-        for (var i = 0; i < propiedades.length; i++) { if (propiedades[i].tipo === 'alquiler') filtradas.push(propiedades[i]); }
-        if (titulo) titulo.textContent = 'Inmuebles en Alquiler';
-    } else {
-        for (var i = 0; i < propiedades.length; i++) { if (propiedades[i].categoria === categoria) filtradas.push(propiedades[i]); }
-        var nombres = { local: 'Locales Comerciales', garaje: 'Garajes', terreno: 'Terrenos' };
-        if (titulo) titulo.textContent = nombres[categoria] || categoria;
-    }
+    if (categoria === 'venta') { if (titulo) titulo.textContent = 'Inmuebles en Venta'; }
+    else if (categoria === 'alquiler') { if (titulo) titulo.textContent = 'Inmuebles en Alquiler'; }
+    else if (categoria === 'local') { if (titulo) titulo.textContent = 'Locales Comerciales'; }
+    else if (categoria === 'garaje') { if (titulo) titulo.textContent = 'Garajes'; }
+    else if (categoria === 'terreno') { if (titulo) titulo.textContent = 'Terrenos'; }
+    else if (categoria === 'habitacion') { if (titulo) titulo.textContent = 'Habitaciones'; }
+    else { if (titulo) titulo.textContent = 'Todos los Inmuebles'; }
     
-    if (subtitulo && categoria !== 'todos') subtitulo.textContent = 'Resultados filtrados en Cienfuegos';
+    if (subtitulo) subtitulo.textContent = filtradas.length + ' inmuebles encontrados en Cienfuegos';
     
     renderizarPropiedades(filtradas);
     var grid = document.getElementById('propiedades-grid');
@@ -132,7 +133,6 @@ function cambiarImagen(dir) {
     imagenActual = (imagenActual + dir + propiedadDetalle.imagenes.length) % propiedadDetalle.imagenes.length;
     actualizarGaleria();
 }
-
 function irAImagen(idx) { if (!propiedadDetalle) return; imagenActual = idx; actualizarGaleria(); }
 
 function actualizarGaleria() {
@@ -203,26 +203,4 @@ function cargarDetalle() {
 document.addEventListener('DOMContentLoaded', function() {
     renderizarPropiedades();
     cargarDetalle();
-    
-    var btnFiltrar = document.querySelector('.btn-filtrar');
-    if (btnFiltrar) {
-        btnFiltrar.addEventListener('click', function() {
-            var selects = document.querySelectorAll('.filtro-select');
-            var tipo = selects[0] ? selects[0].value : '';
-            var operacion = selects[1] ? selects[1].value : '';
-            var habitaciones = selects[2] ? selects[2].value : '';
-            var filtradas = [];
-            for (var i = 0; i < propiedades.length; i++) {
-                var p = propiedades[i];
-                if (p.estado !== 'disponible') continue;
-                if (tipo && p.categoria !== tipo) continue;
-                if (operacion && p.tipo !== operacion) continue;
-                if (habitaciones && p.habitaciones < parseInt(habitaciones)) continue;
-                filtradas.push(p);
-            }
-            renderizarPropiedades(filtradas);
-            var grid = document.getElementById('propiedades-grid');
-            if (grid) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-    }
 });
